@@ -1,5 +1,7 @@
 # zsh aliases
 
+alias hypr='Hyprland'
+
 alias ls='ls --color'
 
 alias clc='wl-copy'
