@@ -130,6 +130,18 @@ return {
 					},
 				})
 			end,
+
+			["tinymist"] = function()
+				-- configure typst server (with special settings)
+				lspconfig["tinymist"].setup({
+					capabilities = capabilities,
+					offset_encoding = "utf-8",
+					settings = {
+						exportPdf = "onSave",
+						formatterMode = "typstyle",
+					},
+				})
+			end,
 		})
 	end,
 }

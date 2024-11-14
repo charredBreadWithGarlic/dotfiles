@@ -36,6 +36,7 @@ return {
 				"hyprls",
 				"intelephense",
 				"clangd",
+				"tinymist",
 			},
 		})
 

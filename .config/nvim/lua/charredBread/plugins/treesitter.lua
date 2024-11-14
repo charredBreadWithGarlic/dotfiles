@@ -38,6 +38,7 @@ return {
 				"c",
 				"rust",
 				"php",
+				"typst",
 			},
 			incremental_selection = {
 				enable = true,
