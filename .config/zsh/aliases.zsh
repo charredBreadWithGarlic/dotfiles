@@ -7,10 +7,12 @@ alias ls='ls --color'
 alias clc='wl-copy'
 alias clp='wl-paste'
 alias nv='nvim'
-alias la='ln -la'
+alias la='ls -la'
+alias ll='ls -l'
 alias sgrep='grep -n -R -C 2 --color'
 
 alias dn='display_note'
+alias ev="evince"
 
 # cargo/rust
 alias cr='cargo run'
@@ -28,7 +30,7 @@ alias gcm='git commit --message'
 alias gpl='git pull'
 alias gst='git status'
 alias glp='git log -p -1' # show exact content of last commit
-alias grs='git restore --staged'
+alias grs='git restore --staged' # unstage file
 alias glf='git log --follow' # display what happend to a file
 alias grc='git rm --cached' # remove file from git
 alias gdc='git diff --cached' # diff on staged files
