@@ -137,8 +137,8 @@ return {
 					capabilities = capabilities,
 					offset_encoding = "utf-8",
 					settings = {
-						exportPdf = "onSave",
 						formatterMode = "typstyle",
+						tabSize = 4,
 					},
 				})
 			end,
