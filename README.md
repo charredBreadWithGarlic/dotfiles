@@ -14,10 +14,10 @@ This is my dotfiles repo. It features:
 - nvim
 - zsh
 
-I manage my dotfiles with stow, this is why most of the configs are located under `.config/`.
-A lot in this setup is only working for specific tasks or looks like it is about to break.
+These dotfiles are managed with `stow`, wrapped by `just`. To get them where they need to go, take a look at the `justfile`.
 
-Also this setup is not as nearly as secure as I would like so please don't use this information here to break it :D
+A lot in this setup is only working for specific tasks or looks like it is about to break.
+This setup is not nearly as secure as I would like it to be, so please don't use this information to break it :D
 
 ## Thanks
 
