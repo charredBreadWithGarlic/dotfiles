@@ -1,4 +1,4 @@
-pc: config local home
+pc: config local home etc
 
 config:
   stow -d . -t ~/.config config
@@ -8,6 +8,9 @@ home:
 
 local:
   stow -d . -t ~/.local local
+
+etc:
+  sudo stow -d . -t /etc etc
 
 server:
   stow -d . -d ~/ server
