@@ -3,10 +3,20 @@ path = "~/Pictures/wallpaper/active/"
 sorting = "random" # can not be set to random as group feature does not work
 
 # These two monitors should inherit from [default]
+# Main 
 [eDP-1]
 group = 1
 
-[DP-4]
+# Main with GPU
+[eDP-2]
+group = 1
+
+# Home
+[eDP-4]
+group = 1
+
+# Home with GPU
+[DP-5]
 group = 1
 
 [DP-3]
@@ -14,4 +24,4 @@ group = 1
 
 # This section should treat every other monitor with only the given wallpaper
 [any]
-path = "~/Pictures/wallpaper/active/dark/wallhaven_cat.png"
+path = "~/Pictures/wallpaper/active/frogs.jpg"
