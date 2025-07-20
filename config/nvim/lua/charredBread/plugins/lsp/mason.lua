@@ -38,6 +38,70 @@ return {
 				"clangd",
 				"tinymist",
 			},
+
+			-- default handler for installed servers
+			function(server_name)
+				lspconfig[server_name].setup({
+					capabilities = capabilities,
+				})
+			end,
+
+			["lua_ls"] = function()
+				-- configure lua server (with special settings)
+				lspconfig["lua_ls"].setup({
+					capabilities = capabilities,
+					settings = {
+						Lua = {
+							-- make the language server recognize "vim" global
+							diagnostics = {
+								globals = { "vim" },
+							},
+							completion = {
+								callSnippet = "Replace",
+							},
+						},
+					},
+				})
+			end,
+
+			["rust-analyzer"] = function()
+				lspconfig["rust-analyzer"].setup({
+					capabilities = capabilities,
+					on_attach = function(client)
+						require("completion").on_attach(client)
+					end,
+					settings = {
+						["rust-analyzer"] = {
+							imports = {
+								granularity = {
+									group = "module",
+								},
+								prefix = "self",
+							},
+							cargo = {
+								buildScripts = {
+									enable = true,
+								},
+							},
+							procMacro = {
+								enable = true,
+							},
+						},
+					},
+				})
+			end,
+
+			["tinymist"] = function()
+				-- configure typst server (with special settings)
+				lspconfig["tinymist"].setup({
+					capabilities = capabilities,
+					offset_encoding = "utf-8",
+					settings = {
+						formatterMode = "typstyle",
+						tabSize = 4,
+					},
+				})
+			end,
 		})
 
 		mason_tool_installer.setup({
