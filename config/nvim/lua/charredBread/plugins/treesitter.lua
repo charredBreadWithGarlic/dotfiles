@@ -40,6 +40,7 @@ return {
 				"php",
 				"typst",
 				"python",
+				"just",
 			},
 			incremental_selection = {
 				enable = true,
