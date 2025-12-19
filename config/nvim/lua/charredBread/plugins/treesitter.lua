@@ -41,6 +41,7 @@ return {
 				"typst",
 				"python",
 				"just",
+				"go",
 			},
 			incremental_selection = {
 				enable = true,

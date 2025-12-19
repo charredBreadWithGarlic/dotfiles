@@ -3,7 +3,7 @@ return {
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
-
+		"hrsh7th/cmp-nvim-lsp",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 	config = function()
@@ -15,6 +15,13 @@ return {
 
 		-- import install helper for other mason stuff
 		local mason_tool_installer = require("mason-tool-installer")
+
+		-- import lspconfig
+		local lspconfig = require("lspconfig")
+
+		-- import cmp-nvim-lsp for capabilities
+		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		local capabilities = cmp_nvim_lsp.default_capabilities()
 
 		-- enable mason and configure icons
 		mason.setup({
@@ -37,6 +44,7 @@ return {
 				"intelephense",
 				"clangd",
 				"tinymist",
+				"gopls",
 			},
 
 			-- default handler for installed servers
@@ -67,9 +75,6 @@ return {
 			["rust-analyzer"] = function()
 				lspconfig["rust-analyzer"].setup({
 					capabilities = capabilities,
-					on_attach = function(client)
-						require("completion").on_attach(client)
-					end,
 					settings = {
 						["rust-analyzer"] = {
 							imports = {
