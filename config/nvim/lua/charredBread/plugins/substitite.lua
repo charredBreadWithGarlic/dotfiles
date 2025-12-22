@@ -1,16 +1,31 @@
 return {
-  "gbprod/substitute.nvim",
-  event = { "BufReadPre", "BufNewFile" },
-  config = function()
-    local substitute = require("substitute")
+	"gbprod/substitute.nvim",
+	event = { "BufReadPre", "BufNewFile" },
+	config = function()
+		local substitute = require("substitute")
 
-    substitute.setup()
+		substitute.setup()
 
-    -- set keymaps
-    local keymap = vim.keymap -- for conciseness
+		-- set keymaps
+		local keymap = vim.keymap -- for conciseness
 
-    vim.keymap.set("n", "<leader>s", require('substitute.range').operator, { noremap = true })
-    vim.keymap.set("x", "<leader>s", require('substitute.range').visual, { noremap = true })
-    vim.keymap.set("n", "<leader>ss", require('substitute.range').word, { noremap = true })
-  end,
+		vim.keymap.set(
+			"n",
+			"<leader>rr",
+			require("substitute.range").operator,
+			{ noremap = true, desc = "Replace Range" }
+		)
+		vim.keymap.set(
+			"x",
+			"<leader>rr",
+			require("substitute.range").visual,
+			{ noremap = true, desc = "Replace Range" }
+		)
+		vim.keymap.set(
+			"n",
+			"<leader>rs",
+			require("substitute.range").word,
+			{ noremap = true, desc = "Replace Word in Range" }
+		)
+	end,
 }
