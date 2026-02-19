@@ -6,23 +6,41 @@
         "custom/separator",
         "hyprland/window",
     ],
+
     "modules-center": ["clock#1", "clock#2"],
-    "modules-right": ["bluetooth#1", "bluetooth#2", "network#1", "network#2", "pulseaudio#1", "pulseaudio#2", "temperature#1", "temperature#2", "battery#1", "battery#2", "clock#4", "clock#5"],
+
+    "modules-right": [
+        "bluetooth#1",
+        "bluetooth#2", 
+        "network#1", 
+        "network#2", 
+        "pulseaudio#1", 
+        "pulseaudio#2", 
+        "temperature#1", 
+        "temperature#2", 
+        "battery#1", 
+        "battery#2", 
+        "clock#4", 
+        "clock#5"
+    ],
 
     "custom/separator": {
         "format": " "
     },
 
     "clock#1": {
+        "tooltip": false,
         "format": "{:%H}",
     },
     "clock#2": {
+        "tooltip": false,
         "format": "{:%M}",
     },
 
     "clock#4": {
         "format": "󰃭",
     },
+
     "clock#5": {
         "format": "{:%Y-%m-%d}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -129,8 +147,10 @@
         // "format-critical": "{temperatureC}°C {icon}",
         "format": " {icon}",
         "format-icons": ["", "", ""],
+        "tooltip": false,
     },
     "temperature#2": {
-      "format": "{temperatureC}°C",
+        "format": "{temperatureC}°C",
+        "tooltip": false,
     },
 }
