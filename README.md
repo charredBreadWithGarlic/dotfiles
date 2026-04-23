@@ -11,13 +11,13 @@ This is my dotfiles repo. It features:
   - background: wpaperd
   - bar-thingy: waybar
   - other: cursorlock (org. hyprlock, for locking cursor)
-- nvim
+- nvim (deprecated)
 - zsh
 
 These dotfiles are managed with `stow`, wrapped by `just`. To get them where they need to go, take a look at the `justfile`.
 
 A lot in this setup is only working for specific tasks or looks like it is about to break.
-This setup is not nearly as secure as I would like it to be, so please don't use this information to break it :D
+This setup is not nearly as secure as I would like it to be, so please don't break it :D
 
 ## Thanks
 
