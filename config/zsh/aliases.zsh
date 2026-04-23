@@ -1,6 +1,6 @@
 # zsh aliases
 
-alias hypr='Hyprland'
+alias hypr='start-hyprland'
 
 alias ls='ls --color'
 
@@ -13,6 +13,7 @@ alias sgrep='grep -n -R -C 2 --color'
 
 alias dn='display_note'
 alias ev="evince"
+alias zed="zeditor"
 
 # cargo/rust
 alias cr='cargo run'
