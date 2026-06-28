@@ -19,6 +19,12 @@ fi
 export EDITOR=nvim
 export PATH="$HOME/.local/bin:$PATH"
 
+# go packages
+export PATH="$HOME/go/bin:$PATH"
+
+# global npm packages
+export PATH=~/.npm-global/bin:$PATH
+
 #
 # --- Zinit ---
 #
@@ -49,3 +55,6 @@ export KEYTIMEOUT=1
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# activate mise
+eval "$(mise activate zsh)"
