@@ -78,4 +78,11 @@
     "light": "Gruvbox Light",
     "dark": "Ayu Mirage",
   },
+  "languages": {
+    "Typst": {
+      "completions": {
+        "words": "enabled",
+      },
+    },
+  },
 }
