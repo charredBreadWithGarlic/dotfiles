@@ -7,8 +7,10 @@
 
 rsync -av --delete --progress ~/brz ~/mnt1/mirror/
 rsync -av --delete --progress ~/Documents ~/mnt1/mirror/
-rsync -av --delete --progress ~/Pictures ~/mnt1/mirror/
 rsync -av --delete --progress ~/.gitconfig ~/mnt1/mirror/
+rsync -av --delete --progress ~/Pictures ~/mnt1/mirror/
+rsync -av --delete --progress ~/.ssh/config ~/mnt1/mirror/
+rsync -av --delete --progress ~/.thunderbird/ ~/mnt1/mirror/
 
 
 # --- Archive ---
